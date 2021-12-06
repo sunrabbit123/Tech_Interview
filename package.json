@@ -1,0 +1,16 @@
+{
+  "name": "tech_interview",
+  "version": "1.0.0",
+  "repository": "https://github.com/sunrabbit123/Tech_Interview.git",
+  "author": "sunrabbit123 <qudwls185@naver.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "eject": "vuepress eject docs"
+  },
+  "devDependencies": {
+    "@vuepress/theme-default": "^1.8.2",
+    "vuepress": "^1.8.2"
+  }
+}
