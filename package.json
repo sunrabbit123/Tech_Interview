@@ -5,12 +5,14 @@
   "author": "sunrabbit123 <qudwls185@naver.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs",
-    "eject": "vuepress eject docs"
+    "dev": "vuepress dev .",
+    "build": "vuepress build .",
+    "eject": "vuepress eject ."
+  },
+  "dependencies": {
+    "vuepress": "^1.8.2"
   },
   "devDependencies": {
-    "@vuepress/theme-default": "^1.8.2",
-    "vuepress": "^1.8.2"
+    "@vuepress/theme-default": "^1.8.2"
   }
 }
