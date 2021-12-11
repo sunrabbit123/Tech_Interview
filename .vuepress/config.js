@@ -3,7 +3,7 @@ module.exports = {
   title: "Tech_Interview",
   description: "기술 인터뷰 모음",
   dest: "build",
-  base: "/Tech/",
+  base: "/Tech_Interview/",
   head: [["link", { rel: "icon", href: "/logo.png" }]],
   themeConfig: {
     sidebar,
