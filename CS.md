@@ -11,8 +11,7 @@ sidebarDepth: 3
 3. [REST API의 정의](#rest-api의-정의)
 4. [GraphQL API의 정의](graphql-api의-정의)
 5. [아키텍쳐는 무엇이고, 대용량 트래픽을 견뎌낼만한 아키텍쳐는 무엇인가](#아키텍쳐는-무엇이고-대용량-트래픽을-견뎌낼만한-아키텍쳐는-무엇인가)
-6. [브라우저에서 도메인을 입력하면 브라우정 렌더링되기까지의 과정](#브라우저에서-도메인을-입력하면-브라우정-렌더링되기까지의-과정)
-7. [immutable에 대해서 설명 좀](#immutable에-대해서-설명-좀)
+6. [immutable에 대해서 설명 좀](#immutable에-대해서-설명-좀)
 
 ## 질문들
 
@@ -69,14 +68,23 @@ API 설계의 중심에 `자원(Resource)`이 있으며, `HTTP Method`를 통해
 ### GraphQL API의 정의
 
 <Detail>
+
+::: tip GraphQL
+GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools.
+:::
+
+위 내용은 GraphQL 공식사이트의 메인페이지에 있는 글이다.
+
+단순히 얘기하면 `GraphQL`은 `API`를 위한 `Query Language`라는 것이다.
+그렇다면 `GraphQL API`는 `GraphQL`를 위해 구성된 `API`라는 추론이 나온다.
+
+또한 쿼리 랭귀지라는 장점을 살려, 클라이언트에서 원하는 데이터값만 서버에 요청할 수 있다.  
+이로 인해, 클라이언트는 불필요한 리소스를 아낄 수 있으며
+서버입장에선 API를 확장해나가기가 편하다.
+
 </Detail>
 
 ### 아키텍쳐는 무엇이고, 대용량 트래픽을 견뎌낼만한 아키텍쳐는 무엇인가
-
-<Detail>
-</Detail>
-
-### 브라우저에서 도메인을 입력하면 브라우정 렌더링되기까지의 과정
 
 <Detail>
 </Detail>
