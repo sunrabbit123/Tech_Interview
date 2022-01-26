@@ -2,12 +2,13 @@
 
 ## 목차
 
-### Python과 Go언어의 차이점을 설명해보세요
+### Python과 Go언어의 차이점을 설명해보세요 ( Python, Golang )
 
 <Detail>
+
 </Detail>
 
-### const, let, var의 차이는 무엇인가요?
+### const, let, var의 차이는 무엇인가요? ( JS, TS )
 
 <Detail>
 JS에서 변수를 선언하는 방법은 위의 세가지 방법이 있습니다.
@@ -98,7 +99,8 @@ console.log(i); // ReferenceError: i is not defined
 
 </Detail>
 
-### 일반 function 표현식과 arrow function 표현식의 차이는 무엇?
+### 일반 function 표현식과 arrow function 표현식의 차이는 무엇? ( JS, TS )
 
 <Detail>
+
 </Detail>

@@ -11,4 +11,5 @@ sidebarDepth: 3
 ### 브라우저에서 도메인을 입력하면 브라우정 렌더링되기까지의 과정
 
 <Detail>
+
 </Detail>
