@@ -158,4 +158,24 @@ GraphQL is a query language for APIs and a runtime for fulfilling those queries 
 
 <Detail>
 
+객체지향에 있어서 `immutable`은 불변객체를 의미한다.  
+불변객체는 말 그대로, 생성 후 상태가 변경되지않는 객체를 의미한다.
+
+예로 파이썬에서는 `number`, `string`, `tuple`이 포함된다.
+
+```py
+>>> x = 1
+>>> y = x
+>>> y += 3
+>>> x
+1
+>>> y
+4
+```
+
+다음을 보면 y는 `number`인데 왜 더할 수 있냐  
+ 라고 물어볼 수 있다.
+
+`number`에서 `1`, `4` 각 각 하나의 불변 객체이기 때문이다.
+
 </Detail>
