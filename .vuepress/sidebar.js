@@ -11,7 +11,7 @@ module.exports = [
   {
     title: "BE",
     description: "BackEnd",
-    children: BE.map((v) => [`/be/${v}`, v]),
+    children: BE.map((v) => [`/BE/${v}`, v]),
     sidebarDepth: 2,
   },
 ];
