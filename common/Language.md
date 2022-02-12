@@ -103,4 +103,46 @@ console.log(i); // ReferenceError: i is not defined
 
 <Detail>
 
+  #### 선언 방식의 차이
+  
+  `function`의 경우 다음과 같이 선언한다.
+  ```js
+  function getOne(){ return 1; }
+  ```
+  
+  그와 달리 `arrow function`의 경우 다음과 같이 선언한다.
+  ```js
+  const getOne = () => 1;
+  const getOne = () => { return 1; }
+  ```
+  
+  이렇게 선언 방법에서의 차이도 있지만, 함수내에서의 접근에서 차이도 있다.
+  
+  #### this 접근
+  
+  일반 `function`에서는 함수에 어떻게 접근되었는지에 따라서 `this`가 어떤 것을 가르키는지 달라진다.   
+  콜백함수 내부에서의 `this`는 전역 객체 `Window`지만, `nodejs`에서는 얘기가 달라집니다.  
+  
+  `module.exports`, `exports`인거죠, 해당 문서에서는 `모듈 수출 객체`라고 칭하겠습니다.  
+  이는 바로 모듈을 수출할 수 있도록 돕는 그 객체입니다.  
+  하지만 `nodejs`에서는 일반적인 함수선언문 내부에서의 `this`는 `global`을 나타냅니다.  
+  
+  이러한 복잡한 `this`는 화살표 함수에서는 달라집니다.  
+  바로 자신의 상위 스코프의 this를 상속받는 것이죠  
+  
+  복잡하니 표로 나타내겠습니다.  
+  
+  |상황| Vanilla JS | Node JS |
+  |:--:|:----|:----|
+  |함수 밖 | Window 객체 | 모듈 수출 객체 |
+  | 일반함수 내부 | 호출방법에 따라 달라짐 | global |
+  | 콜백함수 내부 | Window 객체 | 모듈 수출 객체 |
+  | 화살표 함수 | 상위 스코프의 this | 상위 스코프의 this |
+  | setTimeOut 함수 내부 | X | TimeOut 객체 |
+  
+  정리하자면 화살표함수에는 `this`와 `prototype`이 없으며  
+  그러기에 상위 스코프로 찾아 올라가게 되며, 그로 인한 현상들이다.  
+  
+  > `prototype`이 없기에, 화살표함수로 생성자를 선언할 수 없다.
+  
 </Detail>
