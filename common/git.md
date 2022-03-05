@@ -53,3 +53,31 @@ sidebarDepth: 3
 일반적으로 `feature`브랜치의 `commit history`를 합쳐 깔끔하게 정리하기 위해 사용한다고 한다.
 
 </Detail>
+
+### Cherry Pick
+
+<Detail>
+
+관용적인 뜻으로 "최고를 선별하다."라는 뜻을 지닌다.
+
+다른 브랜치에 있는 `commit`을 특정 브랜치에 적용시킬 때 사용한다.  
+이럴 때 `git rebase`를 사용할 수도 있지만, 이는 현재 브랜치에서만 사용 가능하다.
+
+> git cherry-pick [commit_hash1] [commit_hash2]
+
+와 같은 방법으로 사용한다.
+
+#### Conflict가 발생한 경우
+
+`Cherry pick` 또한 코드를 합치는 과정이기에 `Conflict`가 발생할 수 있다.
+
+충돌을 해결한 이후 `add` 한 다음 `--continue`를 `cherry-pick`에 붙여주면 된다.
+
+> get add [path]
+> git cherry-pick --continue
+
+#### Cherry Pick을 중단할 때
+
+> git cherry-pick --abort
+
+</Detail>
