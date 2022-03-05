@@ -1,5 +1,5 @@
 const BE = ["db", "spring", "stack", "misc"];
-const Common = ["cs", "language", "network"];
+const Common = ["cs", "language", "network", "git"];
 module.exports = [
   "/",
   {
