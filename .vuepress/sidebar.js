@@ -1,5 +1,5 @@
-const BE = ["DB", "Spring", "Stack", "MISC"];
-const Common = ["CS", "Language", "Network"];
+const BE = ["db", "spring", "stack", "misc"];
+const Common = ["cs", "language", "network"];
 module.exports = [
   "/",
   {
@@ -11,7 +11,7 @@ module.exports = [
   {
     title: "BE",
     description: "BackEnd",
-    children: BE.map((v) => [`/BE/${v}`, v]),
+    children: BE.map((v) => [`/be/${v}`, v]),
     sidebarDepth: 2,
   },
 ];
