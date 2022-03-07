@@ -11,14 +11,14 @@
 
 1. [공통적인](./common)
 
-   - CS
-   - Git
-   - Language
-   - Network
+- CS
+- Git
+- Language
+- Network
 
 2. [백엔드](./be)
 
-   - DB
-   - Spring
-   - Stack
-   - MISC
+- DB
+- Spring
+- Stack
+- MISC
