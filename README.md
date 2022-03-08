@@ -15,6 +15,7 @@
    - Git
    - Language
    - Network
+   - Design pattern
 
 2. [백엔드](./be)
 
