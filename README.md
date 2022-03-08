@@ -11,15 +11,22 @@
 
 1. [공통적인](./common)
 
+<<<<<<< HEAD
    - CS
    - Git
    - Language
    - Network
    - Design pattern
+=======
+- CS
+- Git
+- Language
+- Network
+>>>>>>> d2610e429553732841f916614b75b227165a92b2
 
 2. [백엔드](./be)
 
-   - DB
-   - Spring
-   - Stack
-   - MISC
+- DB
+- Spring
+- Stack
+- MISC
