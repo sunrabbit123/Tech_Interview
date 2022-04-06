@@ -13,3 +13,16 @@ sidebarDepth: 3
 <Detail>
 
 </Detail>
+
+### HTTP 프로토콜의 특징
+
+<Detail>
+
+1. Stateless  
+   연결을 끊는 순간 클라이언트와 서버의 연결이 끊기며, 상태가 유지되지않음
+
+2. Connectionless  
+   클라이언트가 request를 서버에보내고,서버가 클라이언트에 요청에 맞는 response를보내면
+   바로 연결을 끊는다.
+
+</Detail>
