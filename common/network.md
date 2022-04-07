@@ -26,3 +26,39 @@ sidebarDepth: 3
    바로 연결을 끊는다.
 
 </Detail>
+
+### 3 / 4 way handshake
+
+<Detail>
+
+#### 3 way handshake
+
+이는 TCP 연결을 초기화하는 과정입니다.  
+이는 양쪽 모두 데이터를 주고받을 준비가 되었다는 것을 보장하며,  
+실제로 데이터를 전달하기 전, 다른 쪽이 준비되었다는 것을 알 수 있게한다.
+
+순서는 다음과 같습니다.
+
+> Client : Syn(n) 서버야 잘 있니?  
+> Server : Ack(n + 1), Syn(m) 어, 잘 있어 근데 너는 잘 있니?  
+> Client : Ack(m + 1) 그럼 연결할게~
+
+임의의 난수를 넣은 Syn 패킷을 날리며,  
+이에 응답하는 의미로 Syn + 1의 값을 담은 값을 Ack로 전송합니다.
+
+#### 4 way handshake
+
+이는 세션을 종료하기 위한 절차입니다.
+
+클라이언트는 서버에 연결통지를 해제하며,  
+서버가 이를 확인했으며, 확인했다는 메세지를 보내는 절차입니다.
+
+> Client : Fin(1) 서버야 나 연결 끊는다? 끊는다?  
+> Server : Ack(Fin.seq + 1), Seq(n) 확인했어, 일단 보내던것만 마저 보내고
+> Server : Fin(1), Seq(n + 1)ㅇㅋ, 이제 끊어
+> Clinet : Ack(n + 2), Seq(Fin.seq + 1) ㅇㅋ 끊음
+
+단 `Server`가 보낸 `Fin`패킷이 기존에 보내던 데이터값들보다 먼저 도착할 수 있기에  
+`Client`는 `TIME_WAIT`의 시간을 지니다, `CLOSE`가 됩니다.
+
+</Detail>
