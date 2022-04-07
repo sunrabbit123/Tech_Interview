@@ -62,3 +62,58 @@ sidebarDepth: 3
 `Client`는 `TIME_WAIT`의 시간을 지니다, `CLOSE`가 됩니다.
 
 </Detail>
+
+### gRpc
+
+<Detail>
+
+| **Feature**            | **gRPC**                      | **HTTP APIs with JSON**       |
+| :--------------------- | :---------------------------- | :---------------------------- |
+| Contract               | Required(`.proto`)            | Optional(OpenAPI)             |
+| Protocol               | HTTP/2                        | HTTP                          |
+| Payload                | Protobuf(small, binary)       | JSON(large, human readable)   |
+| Prescriptiveness       | 엄격한 사양                   | 느슨하며, 모든 HTTP 가능      |
+| Streaming              | 클라이언트, 서버, 양방향      | 클라이언트, 서버              |
+| Browser support        | 안하며, gRPC 지원하는 웹 필요 | 지원함                        |
+| Security               | TLS                           | TLS                           |
+| Client code-generation | Yes                           | OpenAPI + third party tooling |
+
+#### 이런 gRPC는 다음과 같은 상황에 좋습니다.
+
+1. MSA  
+   gRPC는 짧은 대기시간과 높은 처리량 통신을 위해 설계됨  
+   효율성이 중요한 경량 마이크로서비스에 적합
+
+2. node간 실시간 통신  
+   gRPC는 양방향 스트리밍을 지원  
+   풀링없이 실시간으로 메세지를 푸시할 수 있다.
+
+3. 다중 언어 환경  
+   gRPC 도구는 널리 사용되는 모든 개발 언어를 지원  
+   다국어 환경에 적합
+
+4. 네트워크 제약이 있는 환경  
+   gRPC 메시지는 경량 메시지 형식인  
+   Protobuf를 사용하여 직렬화됩니다.  
+   그러기에 gRPC 메시지는 항상 해당하는 JSON 메시지보다 작습니다.
+
+5. IPC(프로세스 간 통신)  
+   Unix 도메인 소켓 및 명명된 파이프와  
+   같은 IPC 전송은 gRPC에서 동일한 머신에 있는  
+   앱 간에 통신하는 데 사용할 수 있습니다.
+
+#### 이런 gRPC는 단점이 있어요!
+
+1. 브라우저 지원이 한정적입니다!
+
+2. 사람이 읽을 수가 없어요!  
+    HTTP API 요청은 텍스트로 전송되지만  
+    gRPC 메시지는 기본적으로 Protobuf로 인코딩됩니다.
+
+   이러한 이진 형식은 사람이 읽을 수가 없습니다!
+
+3. 이럴때는 다른 프레임워크를 추천해요  
+   브라우저에서 액세스 가능한 API  
+   브로드캐스트 실시간 통신
+
+</Detail>
