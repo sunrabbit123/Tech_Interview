@@ -36,6 +36,48 @@ sidebarDepth: 3
 
 - 장점 : 인스턴스로의 접근이 통제되며, 접근이 캡슐화가 된다.
 
+#### 구현
+
+다음과 같이 하나의 인스턴스를 유지하기 위하여 인스턴스 생성에 제약을 둔다.  
+또한 new를 실행 못하게 private을 걸고 유일한 단일 객체 지원을 위해 정적 메서드를 지원한다.  
+그리고 유일한 단일 객체를 참조할 정적 참조변수가 필요하다.
+
+```java
+public class Singleton {
+    private static Singleton singletonObject;
+
+    private Singleton() {}
+
+    public static synchronized Singleton getInstance() {
+        if (singletonObject == null) {
+            singletonObject = new Singleton();
+        }
+        return singletonObject;
+    }
+}
+```
+
+또한 `synchronized` 키워드가 없다면,  
+멀티스레딩환경에서 하나만 있어야 되는 것이 둘 이상이 될 수 있기에 위험하다.  
+그러기에 해당 키워드를 통해 메서드를 동기화 시켜준다.
+
+그렇지만 이는 성능상의 문제가 생긴다.  
+그러기에 다음과 같은 모습을 추천한다.
+
+```java
+public class Singleton {
+    private static volatile Singleton singletonObject = new Singleton();
+
+    private Singleton() {}
+
+    public static Singleton getSingletonObject() {
+        return singletonObject;
+    }
+}
+```
+
+클래스가 로딩 될 때, 객체를 준비해주는 모습이다.
+
 </Detail>
 
 ### 빌더 패턴
@@ -61,3 +103,5 @@ sidebarDepth: 3
 보통 자신이 어떤 객체를 생성할지 모르는 상황에 사용한다.
 
 </Detail>
+
+###
