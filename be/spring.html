@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>서버관련 요모조모 | Tech_Interview</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/Tech_Interview/logo.png">
+    <meta name="description" content="기술 인터뷰 모음">
+    
+    <link rel="preload" href="/Tech_Interview/assets/css/0.styles.b2543498.css" as="style"><link rel="preload" href="/Tech_Interview/assets/js/app.677ee2cb.js" as="script"><link rel="preload" href="/Tech_Interview/assets/js/2.6d972c90.js" as="script"><link rel="preload" href="/Tech_Interview/assets/js/15.ebf030a7.js" as="script"><link rel="preload" href="/Tech_Interview/assets/js/9.5821d1fb.js" as="script"><link rel="prefetch" href="/Tech_Interview/assets/js/10.adbe87a7.js"><link rel="prefetch" href="/Tech_Interview/assets/js/11.3f5c8a6c.js"><link rel="prefetch" href="/Tech_Interview/assets/js/12.54d6efd4.js"><link rel="prefetch" href="/Tech_Interview/assets/js/13.f657195e.js"><link rel="prefetch" href="/Tech_Interview/assets/js/14.3cdfddad.js"><link rel="prefetch" href="/Tech_Interview/assets/js/16.9c18405e.js"><link rel="prefetch" href="/Tech_Interview/assets/js/17.f1dffce9.js"><link rel="prefetch" href="/Tech_Interview/assets/js/18.1cd1b292.js"><link rel="prefetch" href="/Tech_Interview/assets/js/19.581096a5.js"><link rel="prefetch" href="/Tech_Interview/assets/js/20.93e75dc1.js"><link rel="prefetch" href="/Tech_Interview/assets/js/21.f488af5f.js"><link rel="prefetch" href="/Tech_Interview/assets/js/22.82c14290.js"><link rel="prefetch" href="/Tech_Interview/assets/js/3.2e8613b6.js"><link rel="prefetch" href="/Tech_Interview/assets/js/4.5e47ef34.js"><link rel="prefetch" href="/Tech_Interview/assets/js/5.8e10ac8e.js"><link rel="prefetch" href="/Tech_Interview/assets/js/6.44733480.js"><link rel="prefetch" href="/Tech_Interview/assets/js/7.99984a28.js"><link rel="prefetch" href="/Tech_Interview/assets/js/8.a07e87f0.js">
+    <link rel="stylesheet" href="/Tech_Interview/assets/css/0.styles.b2543498.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="global-layout"><div class="theme-container"><aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Tech_Interview/" class="nav-link">
+    About
+  </a></div><div class="nav-item"><a href="/Tech_Interview/be/.html#" class="nav-link">
+    Contribute
+  </a></div><div class="nav-item"><a href="https://github.com/sunrabbit123/Tech_Interview" target="_blank" rel="noopener noreferrer" class="nav-link external">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/Tech_Interview/" aria-current="page" class="sidebar-link">기술인터뷰</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Common</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>BE</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Tech_Interview/be/db.html" class="sidebar-link">db</a></li><li><a href="/Tech_Interview/be/spring.html" aria-current="page" class="active sidebar-link">spring</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Tech_Interview/be/spring.html#목차" class="sidebar-link">목차</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Tech_Interview/be/spring.html#클라이언트의-요청마다-thread가-생성되고-controller에-요청을-할텐데-어떻게-1개의-controller만으로-요청들을-다-처리할-수-있는가-singleton" class="sidebar-link">클라이언트의 요청마다 Thread가 생성되고 Controller에 요청을 할텐데 어떻게 1개의 Controller만으로 요청들을 다 처리할 수 있는가?(Singleton)</a></li></ul></li></ul></li><li><a href="/Tech_Interview/be/stack.html" class="sidebar-link">stack</a></li><li><a href="/Tech_Interview/be/misc.html" class="sidebar-link">misc</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="서버관련-요모조모"><a href="#서버관련-요모조모" class="header-anchor">#</a> 서버관련 요모조모</h1> <h2 id="목차"><a href="#목차" class="header-anchor">#</a> 목차</h2> <h3 id="클라이언트의-요청마다-thread가-생성되고-controller에-요청을-할텐데-어떻게-1개의-controller만으로-요청들을-다-처리할-수-있는가-singleton"><a href="#클라이언트의-요청마다-thread가-생성되고-controller에-요청을-할텐데-어떻게-1개의-controller만으로-요청들을-다-처리할-수-있는가-singleton" class="header-anchor">#</a> 클라이언트의 요청마다 Thread가 생성되고 Controller에 요청을 할텐데 어떻게 1개의 Controller만으로 요청들을 다 처리할 수 있는가?(Singleton)</h3> <details><summary> 그게 뭔가요! </summary> <div><div class="language- extra-class"><pre><code>서버가 실행되고 Controller는 Spring Beans에 담겨있어
+Client Thread의 요청이 들어오면 Controller객체를 새로 생성하지 않고
+Spring Beans Container에서 꺼내쓰는 구조
+</code></pre></div></div></details></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">7/7/2022, 11:17:44 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/Tech_Interview/be/db.html" class="prev">
+          db
+        </a></span> <span class="next"><a href="/Tech_Interview/be/stack.html">
+          stack
+        </a>
+        →
+      </span></p></div> </main> <header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Tech_Interview/" class="home-link router-link-active"><img src="/Tech_Interview/logo.png" alt="Tech_Interview" class="logo"> <span class="site-name can-hide">Tech_Interview</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Tech_Interview/" class="nav-link">
+    About
+  </a></div><div class="nav-item"><a href="/Tech_Interview/be/.html#" class="nav-link">
+    Contribute
+  </a></div><div class="nav-item"><a href="https://github.com/sunrabbit123/Tech_Interview" target="_blank" rel="noopener noreferrer" class="nav-link external">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div></div> <footer class="siteFooter"><div class="container"><p class="siteFooterContact">
+          qudwls185@naver.com . +82 10-5185-8462 .
+          <a href="https://github.com/sunrabbit123" target="_blank">GitHub</a> .
+          <a href="https://github.com/sunrabbit123/Tech_Interview/" target="_blank">Repository</a></p></div></footer></div><div class="global-ui"></div></div>
+    <script src="/Tech_Interview/assets/js/app.677ee2cb.js" defer></script><script src="/Tech_Interview/assets/js/2.6d972c90.js" defer></script><script src="/Tech_Interview/assets/js/15.ebf030a7.js" defer></script><script src="/Tech_Interview/assets/js/9.5821d1fb.js" defer></script>
+  </body>
+</html>
